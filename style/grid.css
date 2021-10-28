@@ -1,0 +1,73 @@
+:root {
+    --Halloween-orange: #EB6123;
+    --Mettalic-view:  #f5cd08;
+    --Chinise-black: #171615;
+    --Rebecca-purple: #5f2b93;
+    --Headings-Font-family: 'Cabin', sans-serif;
+    --Text-Font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--Halloween-orange);
+}
+
+#header { grid-area: header; background-color: var(--Halloween-orange); width: 100%; height: 5vh;}
+#main { grid-area: main; background-color: var(--Halloween-orange); width: 100%; height: 45vh;}
+#gallery { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-area: gallery; 
+    background-color: var(--Halloween-orange); 
+    width: 100%; 
+    height: 45vh;
+}
+
+#footer { grid-area: footer; background-color: var(--Halloween-orange); width: 100%; height: 5vh; text-align: center;}
+.container{
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'main main main'
+    'gallery gallery gallery'
+    'footer footer footer'
+    ;
+}
+
+.image-container{
+    width: 150px;
+    height: 200px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+nav ul li{
+    padding: 20px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li a{
+    color: var(--Chinise-black);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.image1{
+    grid: 1 / 3;
+}
+.image2{
+    grid: 2 / 3;
+}
+.image3{
+    grid: 3 / 3 ;
+}
